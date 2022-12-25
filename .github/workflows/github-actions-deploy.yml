@@ -1,8 +1,9 @@
 name: Deploy docs
+run-name: ${{ github.actor }} is deploying out GitHub Actions 🚀
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
