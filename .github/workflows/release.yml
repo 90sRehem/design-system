@@ -1,16 +1,20 @@
-name: Deploy docs
-run-name: ${{ github.actor }} is deploying out GitHub Actions 🚀
+name: Release
+
 on:
   push:
     branches:
       - master
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
 jobs:
-  build-and-deploy:
+  release:
+    name: Release
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Repo
         uses: actions/checkout@v3
-    
+
       - uses: pnpm/action-setup@v2
         name: Setup pnpm
         id: pnpm-install
@@ -38,15 +42,17 @@ jobs:
           cache: 'pnpm'
           cache-dependency-path: '**/pnpm-lock.yaml' 
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: pnpm install
 
-      - run: pnpm run build
+      - name: Publish to npm
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          # This expects you to have a script called release which does a build for your packages and calls changeset publish
+          publish: pnpm release
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           TURBO_TOKEN: dnNwOtihBaUESHRyEjFHG9Fc
           TURBO_TEAM: 90srehem
-      - name: Deploy storybook
-        working-directory: ./packages/docs
-        run: pnpm run deploy-storybook -- --ci --existing-output-dir=storybook-static
-        env:
-          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}

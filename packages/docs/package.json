@@ -31,7 +31,7 @@
   "dependencies": {
     "@rehem-design-system/eslint-config": "workspace:^2.0.0",
     "@rehem-design-system/react": "workspace:^2.0.0",
-    "@rehem-design-system/tokens": "workspace:^2.0.0",
+    "@rehem-design-system/tokens": "workspace:^2.1.0",
     "@rehem-design-system/ts-config": "workspace:^2.0.0",
     "phosphor-react": "^1.4.1",
     "polished": "^4.2.2",
