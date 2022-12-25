@@ -1,0 +1,11 @@
+{
+	"private": true,
+	"scripts": {
+		"start": "turbo run dev --parallel",
+		"build": "turbo build",
+		"serve": "turbo serve"
+	},
+	"devDependencies": {
+		"turbo": "^1.6.3"
+	}
+}
