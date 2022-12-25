@@ -40,6 +40,9 @@ jobs:
         run: pnpm install
 
       - run: pnpm run build
+        env:
+          TURBO_TOKEN: 88SmL0TQg7NA9VtI0gNwXwVr
+          TURBO_TEAM: 90srehem
 
       - name: Deploy storybook
         working-directory: ./packages/docs
