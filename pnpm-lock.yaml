@@ -1533,13 +1533,6 @@ packages:
       regenerator-runtime: 0.13.11
     dev: true
 
-  /@babel/runtime/7.20.6:
-    resolution: {integrity: sha512-Q+8MqP7TiHMWzSfwiJwXCjyf4GYA4Dgw3emg/7xmwsdLJOZUp+nMqcOwOzzYheuM1rhDu8FSj2l0aoMygEuXuA==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      regenerator-runtime: 0.13.11
-    dev: true
-
   /@babel/runtime/7.20.7:
     resolution: {integrity: sha512-UF0tvkUtxwAgZ5W/KrkHf0Rn0fdnLDU9ScxBrEVNUprE/MzirjK4MJUX1/BVDv00Sv8cljtukVK1aky++X1SjQ==}
     engines: {node: '>=6.9.0'}
@@ -1847,7 +1840,6 @@ packages:
     dependencies:
       '@babel/runtime': 7.5.5
       '@design-systems/utils': 2.12.0_ib3m5ricvtkl2cll7qpr2f6lvq
-      '@rehem-design-systems/utils': 2.12.0_ib3m5ricvtkl2cll7qpr2f6lvq
       clsx: 1.1.0
       react: 18.2.0
     transitivePeerDependencies:
@@ -2546,22 +2538,6 @@ packages:
       '@radix-ui/react-use-layout-effect': 1.0.0_react@18.2.0
       react: 18.2.0
     dev: false
-
-  /@rehem-design-systems/utils/2.12.0_ib3m5ricvtkl2cll7qpr2f6lvq:
-    resolution: {integrity: sha512-Y/d2Zzr+JJfN6u1gbuBUb1ufBuLMJJRZQk+dRmw8GaTpqKx5uf7cGUYGTwN02dIb3I+Tf+cW8jcGBTRiFxdYFg==}
-    peerDependencies:
-      '@types/react': '*'
-      react: '>= 16.8.6'
-      react-dom: '>= 16.8.6'
-    dependencies:
-      '@babel/runtime': 7.20.6
-      '@types/react': 18.0.26
-      clsx: 1.1.0
-      focus-lock: 0.8.1
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-      react-merge-refs: 1.1.0
-    dev: true
 
   /@rocketseat/eslint-config/1.1.3_lzzuuodtsqwxnvqeq4g4likcqa:
     resolution: {integrity: sha512-IiaAOidc54h7xqQbl8zUCmd5wN9ftK5WmbCS5aBIZUNvaIB5HyJb+NRsmUT7vXPSLkv5uiattWY/1pKV1hi19A==}
