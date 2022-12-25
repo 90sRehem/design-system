@@ -17,7 +17,7 @@ importers:
       '@mdx-js/react': ^1.6.22
       '@rehem-design-system/eslint-config': workspace:^2.0.0
       '@rehem-design-system/react': workspace:^2.0.0
-      '@rehem-design-system/tokens': workspace:^2.0.0
+      '@rehem-design-system/tokens': workspace:^2.1.0
       '@rehem-design-system/ts-config': workspace:^2.0.0
       '@storybook/addon-a11y': ^6.5.15
       '@storybook/addon-actions': ^6.5.15
