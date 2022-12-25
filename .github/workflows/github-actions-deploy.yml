@@ -1,28 +1,35 @@
-name: pnpm Example Workflow
+name: Deploy docs
+run-name: ${{ github.actor }} is deploying out GitHub Actions 🚀
 on:
   push:
+    branches:
+      - master
 jobs:
-  build:
-    runs-on: ubuntu-lastest
-    strategy:
-      matrix:
-        node-version: [16]
+  build-and-deploy:
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: pnpm/action-setup@v2
-      with:
-        version: 7
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'pnpm'
-    - name: Install dependencies
-      run: pnpm install
-    - name: Build and deploy
-      run: pnpm run build
-    - name: Deploy Storybook
-      working-directory: ./packages/docs
-      run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
-      env:
-        GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: pnpm install
+        uses: pnpm/action-setup@v2
+        with: 
+          version: 7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'pnpm'
+
+      - name: Install dependencies
+      - run: pnpm install
+
+      - name: Build
+      - run: npm run build
+
+      - name: Deploy storybook
+        working-directory: ./packages/docs
+        run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
+        env:
+          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
