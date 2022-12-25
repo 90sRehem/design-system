@@ -1,4 +1,4 @@
-import { Avatar, AvatarProps } from "@design-system/react"
+import { Avatar, AvatarProps } from "@rehem-design-system/react"
 import type { StoryObj, Meta } from "@storybook/react"
 
 export default {

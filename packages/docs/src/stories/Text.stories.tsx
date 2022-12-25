@@ -1,4 +1,4 @@
-import { Text, TextProps } from "@design-system/react"
+import { Text, TextProps } from "@rehem-design-system/react"
 import type { StoryObj, Meta } from "@storybook/react"
 
 export default {

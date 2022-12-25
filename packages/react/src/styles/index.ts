@@ -6,7 +6,7 @@ import {
   lineHeights,
   radii,
   space,
-} from '@design-system/tokens'
+} from '@rehem-design-system/tokens'
 import { createStitches, defaultThemeMap } from '@stitches/react'
 
 export const {

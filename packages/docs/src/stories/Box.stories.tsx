@@ -1,4 +1,4 @@
-import { Box, BoxProps, Text } from "@design-system/react"
+import { Box, BoxProps, Text } from "@rehem-design-system/react"
 import type { StoryObj, Meta } from "@storybook/react"
 
 export default {

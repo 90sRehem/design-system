@@ -1,4 +1,4 @@
-import { colors } from "@design-system/tokens";
+import { colors } from "@rehem-design-system/tokens";
 import { getContrast } from "polished";
 
 export function ColorsGrid() {

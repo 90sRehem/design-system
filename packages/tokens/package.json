@@ -1,5 +1,5 @@
 {
-  "name": "@design-system/tokens",
+  "name": "@rehem-design-system/tokens",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -15,9 +15,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@rehem-design-system/eslint-config": "^2.0.0",
+    "@rehem-design-system/ts-config": "^2.0.0",
     "tsup": "^6.5.0",
-    "typescript": "^4.9.4",
-    "@design-system/ts-config": "*",
-    "@design-system/eslint-config": "*"
+    "typescript": "^4.9.4"
   }
 }

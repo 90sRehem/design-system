@@ -1,4 +1,4 @@
-import { Heading, HeadingProps } from "@design-system/react"
+import { Heading, HeadingProps } from "@rehem-design-system/react"
 import type { StoryObj, Meta } from "@storybook/react"
 
 export default {
