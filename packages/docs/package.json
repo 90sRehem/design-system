@@ -29,10 +29,10 @@
     "vite": "^4.0.3"
   },
   "dependencies": {
-    "@rehem-design-system/eslint-config": "^2.0.0",
-    "@rehem-design-system/react": "^2.0.0",
-    "@rehem-design-system/tokens": "^2.0.0",
-    "@rehem-design-system/ts-config": "^2.0.0",
+    "@rehem-design-system/eslint-config": "workspace:^2.0.0",
+    "@rehem-design-system/react": "workspace:^2.0.0",
+    "@rehem-design-system/tokens": "workspace:^2.0.0",
+    "@rehem-design-system/ts-config": "workspace:^2.0.0",
     "phosphor-react": "^1.4.1",
     "polished": "^4.2.2",
     "prop-types": "^15.8.1",
