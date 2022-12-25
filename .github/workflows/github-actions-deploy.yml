@@ -43,7 +43,7 @@ jobs:
 
       - run: pnpm run build
         env:
-          TURBO_TOKEN: dnNwOtihBaUESHRyEjFHG9Fc
+          TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
           TURBO_TEAM: 90srehem
       - name: Deploy storybook
         working-directory: ./packages/docs
